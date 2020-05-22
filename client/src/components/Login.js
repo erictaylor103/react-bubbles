@@ -2,15 +2,19 @@ import React, { useState } from "react";
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 
 const Login = (props) => {
-    const [userInput, setUserInput] = useState({ username: '', password: '' })
+    const [userInput, setUserInput] = useState({ 
+      username: 'Lambda School', 
+      password: 'i<3Lambd4' 
+    })
 
 
     const handleChange = e =>{
       setUserInput({
         ...userInput,
-        [e.target.value]: e.target.value
+        [e.target.name]: e.target.value
+        
       })
-      
+      //console.log(e.target.value);
     }
 
     const handleSubmit = e =>{
@@ -28,7 +32,7 @@ const Login = (props) => {
         
       })
     }
-
+//p
 
   return (
     <>
